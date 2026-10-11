@@ -1,4 +1,5 @@
 
+<?php include "control.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
