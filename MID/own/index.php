@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <img src="images.jpg" alt="My Image" width="200">
 
     <h1>Registration Form</h1>
 
