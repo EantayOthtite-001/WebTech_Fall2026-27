@@ -1,80 +1,48 @@
-
-<?php include "control.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>My Profile</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <img src="images.jpg" alt="My Image" width="200">
 
-    <h1>Registration Form</h1>
+    
+    <nav>
+        <a href="#">Home</a> | 
+        <a href="#">About</a> | 
+        <a href="#">Contact</a>
+    </nav>
 
-    <form>
-        <table>
-            <tr>
-                <td><label for="Full_Name">Full Name:</label></td>
-                <td><input type="text" id="Full_Name" name="Full_Name"></td>
-            </tr>
+    <img id="pp" src="images.jpg" alt="Profile Picture">
 
-            <tr>
-                <td><label for="Email">Email:</label></td>
-                <td><input type="email" id="Email" name="Email"></td>
-            </tr>
+    <h1>My Profile</h1>
 
-            <tr>
-                <td><label for="Password">Password:</label></td>
-                <td><input type="password" id="Password" name="Password"></td>
-            </tr>
+    <h2>About Me</h2>
+    <p id="about">
+        I am too much exhusted to write about myself.
+    </p>
 
-            <tr>
-                <td><label for="Comment">Comment:</label></td>
-                <td><textarea id="Comment" name="Comment" rows="6" cols="45"></textarea></td>
-            </tr>
+    <h3>Get in Touch</h3>
 
-            <tr>
-                <td>Gender:</td>
-                <td>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
+    
+    <form action="control.php" method="POST">
+        <fieldset>
+            <legend>Contact Form</legend>
+            
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
 
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
-                </td>
-            </tr>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4"></textarea><br>
 
-            <tr>
-                <td>Please Choose a Hobby:</td>
-                <td>
-                    <input type="checkbox" id="singing" name="hobby" value="Singing">
-                    <label for="singing">Singing</label>
-
-                    <input type="checkbox" id="dancing" name="hobby" value="Dancing">
-                    <label for="dancing">Dancing</label>
-
-                    <input type="checkbox" id="reading" name="hobby" value="Reading">
-                    <label for="reading">Reading</label>
-                </td>
-            </tr>
-
-            <tr>
-                <td><label for="file">Please Choose a File:</label></td>
-                <td><input type="file" id="file" name="file"></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </td>
-            </tr>
-        </table>
+            <input type="submit" id="submit" value="Submit">
+            <input type="reset" id="reset" value="Reset">
+        </fieldset>
     </form>
 
 </body>
